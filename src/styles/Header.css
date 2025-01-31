@@ -74,7 +74,7 @@
   color: #ffffff; 
   transform: scale(1.05); 
   outline: none; /* Adicionado */
-  border-color: #E5E7EB; /* Garante consistência */
+  border-color: #ffffff; /* Garante consistência */
 }
 
 .logout-button:focus {

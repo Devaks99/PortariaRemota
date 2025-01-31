@@ -62,10 +62,12 @@ h1 {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .time-and-actions span {
   margin-right: 0.5rem; /* Espaço entre hora e botões */
+
 }
 
 .visits-table td {
@@ -78,9 +80,6 @@ h1 {
   border-bottom: 1px solid var(--border-color);
 }
 
-.visits-table tr:hover td {
-  background-color: var(--hover-bg);
-}
 
 
 /* Botão Adicionar nova visita */
@@ -118,7 +117,7 @@ h1 {
 .visits-table td:nth-child(1) {
   text-align: left;
   padding-left: 2rem;
-  width: 15%; /* Aumentado para nomes longos */
+  width: 20%; /* Aumentado para nomes longos */
   font-weight: 600;
 
 }
@@ -127,21 +126,21 @@ h1 {
 .visits-table td:nth-child(2) {
   text-align: left;
   padding-left: 1.5rem;
-  width: 20%; /* Reduzido para 20% (valor coerente) */
+  width: 15%; /* Reduzido para 20% (valor coerente) */
 }
 
 .visits-table th:nth-child(3), /* HORA */
 .visits-table td:nth-child(3) {
   text-align: left;
   padding-left: 1rem;
-  width: 50%; /* Aumentado para melhor legibilidade */
+  width: 55%; /* Aumentado para melhor legibilidade */
 }
 
 .visits-table th:nth-child(4), /* STATUS */
 .visits-table td:nth-child(4) {
   text-align: center;
   padding-right: 1rem;
-  width: 15%; /* Espaço extra para botões maiores */
+  width: 10%; /* Espaço extra para botões maiores */
 }
 
 /* Container HORA + Ações - Alinhamento à esquerda */
@@ -149,7 +148,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Alterei de flex-start para space-between */
-  gap: 1rem;
+ margin-right: 300px;
 }
 
 .time-display {
@@ -167,7 +166,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   padding: 0.35rem 0.75rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid;
   transition: all 0.2s;
   background-color: white;
@@ -182,7 +181,7 @@ h1 {
   background-color: #E5E7EB;
   transform: translateY(-1px);
   color: #1F2A37; 
-  border-color: #1F2A37; 
+  border-color: #1f2a376e; 
 }
 
 .cancel-button {
@@ -194,7 +193,7 @@ h1 {
   background-color: #E5E7EB;
   transform: translateY(-1px);
   color: #1F2A37; 
-  border-color: #1F2A37; 
+  border-color: #1f2a376e; 
 }
 
 .button-icon {
@@ -217,14 +216,14 @@ h1 {
   font-size: 12px; /* Tamanho de fonte ligeiramente maior */
   font-weight: 500;
   white-space: nowrap;
-  min-width: 110px; /* Largura mínima para uniformidade */
+  min-width: 100px; /* Largura mínima para uniformidade */
   justify-content: center;
   margin: 0 auto; /* Centralização horizontal na célula */
-  transition: all 0.2s;
+  transition: all 0.1s;
   border:none;
   height: 20px; /* Altura fixa */
   box-sizing: border-box; /* Garante que padding não altere dimensões */
-  margin-top: 15px;
+  margin-top: 18px;
 }
 
 .status-não-realizada {
@@ -234,13 +233,13 @@ h1 {
 }
 
 .status-realizada {
-  color: #047857 !important;    /* Verde esmeralda da imagem */
-  background-color: #D1FAE5;
+  color: #03543F !important;    /* Verde esmeralda da imagem */
+  background-color: #DEF7EC;
   border-color: #A7F3D0;
 }
 
 .status-cancelada {
-  color: #9B1C1C !important;   /* Cinza grafite da imagem */
+  color: #9B1C1C!important;   /* Cinza grafite da imagem */
   background-color: #FBD5D5;
   border-color: #FEB2B2;;
 }
@@ -260,15 +259,15 @@ h1 {
 /* Botões e números */
 .pagination-button, 
 .page-number {
-  padding: 5px 15px;
+  padding: 5px 10px;
   border: none;
-  border-right: 1px solid var(--border-color);
   background: white;
   color: var(--text-medium);
   transition: all 0.2s;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  font-size: 14px;
 }
 
 /* Remove a borda direita do último elemento */
