@@ -2,7 +2,7 @@
 
 Uma interface intuitiva para gerenciar visitas com uma tabela moderna e funcional , status visualmente ricos em design minimalista e moderno. Ideal para sistemas de controle de acesso ou agendas.
 
-![Preview da Interface](./src/preview/tela-1-portaria.png "Tela Principal do Projeto")
+![Preview da Interface](./src/preview/tela-1-portaria.png)
 
 ## ✨ Funcionalidades Principais
 - **Tabela dinâmica** com efeitos hover e rolagem suave  
