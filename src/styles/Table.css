@@ -1,0 +1,329 @@
+:root {
+  --primary-color: #3B82F6;
+  --success-color: #10B981;
+  --danger-color: #EF4444;
+  --text-dark: #1F2A37;
+  --text-medium: #6B7280;
+  --border-color: #E5E7EB;
+  --hover-bg: #F9FAFB;
+}
+
+.table-container {
+  position: absolute; /* Mantém o posicionamento absoluto */
+  top: 64.2%;
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centralização horizontal apenas */
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  min-height: 300px; /* Altura mínima para evitar encolhimento */
+  overflow-y: auto; /* Permite rolagem vertical se necessário */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin-top: 1.4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+  text-align: left;
+  letter-spacing: -0.025em;
+  padding-bottom: 1rem;
+  text-shadow: 0 3px 6px rgba(17, 24, 39, 0.2);
+}
+
+.visits-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.visits-table th {
+  background-color: #F9FAFB;
+  color: var(--text-medium);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.time-and-actions span {
+  margin-right: 0.5rem; /* Espaço entre hora e botões */
+}
+
+.visits-table td {
+  padding: 1rem 0.7rem;
+  color: var(--text-dark);
+  transition: background-color 0.2s;
+}
+
+.visits-table tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.visits-table tr:hover td {
+  background-color: var(--hover-bg);
+}
+
+
+/* Botão Adicionar nova visita */
+.add-visit-button {
+  background-color: #1A56DB;
+  color: white !important; /* Texto branco */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-visit-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-1px);
+  opacity: 0.9; /* Efeito de transição suave */
+}
+
+@media (max-width: 768px) {
+  .add-visit-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+
+/* Ajustes específicos para as colunas */
+.visits-table th:nth-child(1), /* VISITANTE */
+.visits-table td:nth-child(1) {
+  text-align: left;
+  padding-left: 2rem;
+  width: 15%; /* Aumentado para nomes longos */
+  font-weight: 600;
+
+}
+
+.visits-table th:nth-child(2), /* DATA */
+.visits-table td:nth-child(2) {
+  text-align: left;
+  padding-left: 1.5rem;
+  width: 20%; /* Reduzido para 20% (valor coerente) */
+}
+
+.visits-table th:nth-child(3), /* HORA */
+.visits-table td:nth-child(3) {
+  text-align: left;
+  padding-left: 1rem;
+  width: 50%; /* Aumentado para melhor legibilidade */
+}
+
+.visits-table th:nth-child(4), /* STATUS */
+.visits-table td:nth-child(4) {
+  text-align: center;
+  padding-right: 1rem;
+  width: 15%; /* Espaço extra para botões maiores */
+}
+
+/* Container HORA + Ações - Alinhamento à esquerda */
+.time-and-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Alterei de flex-start para space-between */
+  gap: 1rem;
+}
+
+.time-display {
+  margin-right: 50px; /* Mantém o horário alinhado à esquerda */
+}
+
+
+/* Texto da hora */
+.actions-buttons {
+  display: flex;
+  gap: 0.5rem; /* Aumente de 0.75rem para 1.5rem */
+  padding: 0 0.5rem; /* Adicione padding se necessário */
+}
+.edit-button, .cancel-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.edit-button {
+  color: #1F2A37;
+  border-color: #E5E7EB;
+}
+
+.edit-button:hover {
+  background-color: #E5E7EB;
+  transform: translateY(-1px);
+  color: #1F2A37; 
+  border-color: #1F2A37; 
+}
+
+.cancel-button {
+  color: #1F2A37;
+  border-color: #E5E7EB;
+}
+
+.cancel-button:hover {
+  background-color: #E5E7EB;
+  transform: translateY(-1px);
+  color: #1F2A37; 
+  border-color: #1F2A37; 
+}
+
+.button-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Ajustes de foco */
+.edit-button:focus, .cancel-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(80, 97, 124, 0.2);
+}
+
+/* Status - Ajuste de alinhamento */
+[class^="status-"] {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem 1.5rem; /* Aumento do padding vertical */
+  border-radius: 20px; /* Bordas menos arredondadas */
+  font-size: 12px; /* Tamanho de fonte ligeiramente maior */
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 110px; /* Largura mínima para uniformidade */
+  justify-content: center;
+  margin: 0 auto; /* Centralização horizontal na célula */
+  transition: all 0.2s;
+  border:none;
+  height: 20px; /* Altura fixa */
+  box-sizing: border-box; /* Garante que padding não altere dimensões */
+  margin-top: 15px;
+}
+
+.status-não-realizada {
+  color: #1E429F !important;   
+  background-color: #E1EFFE;
+  border-color: #B3D7FF; /* Borda compatível com o fundo */
+}
+
+.status-realizada {
+  color: #047857 !important;    /* Verde esmeralda da imagem */
+  background-color: #D1FAE5;
+  border-color: #A7F3D0;
+}
+
+.status-cancelada {
+  color: #9B1C1C !important;   /* Cinza grafite da imagem */
+  background-color: #FBD5D5;
+  border-color: #FEB2B2;;
+}
+
+
+/* botoes de anterior e prox */
+.pagination {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 2rem 4px 0 auto; /* Alinhamento à direita */
+  width: fit-content; /* Ajusta largura ao conteúdo */
+  margin-top: 50px;
+}
+
+/* Botões e números */
+.pagination-button, 
+.page-number {
+  padding: 5px 15px;
+  border: none;
+  border-right: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-medium);
+  transition: all 0.2s;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Remove a borda direita do último elemento */
+.pagination-button:last-child,
+.page-number:last-child {
+  border-right: none;
+}
+
+/* Estado ativo */
+.page-number.active {
+  background-color: #E1EFFE;
+  color: #1A56DB!important;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Efeito hover */
+.page-number:hover,
+.pagination-button:hover {
+  background-color: #E1EFFE;
+  color: #1A56DB;
+}
+
+/* Ícones (se necessário) */
+.pagination-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+/* Adaptação para mobile */
+@media (max-width: 768px) {
+  .pagination-button span {
+    display: none; /* Esconde texto em mobile */
+  }
+  
+  .pagination-button,
+  .page-number {
+    padding: 0.75rem;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 1rem;
+  }
+  
+  .pagination-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .page-number {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}

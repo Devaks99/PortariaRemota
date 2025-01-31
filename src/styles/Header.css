@@ -1,0 +1,87 @@
+.header {
+  display: flex; /* Define o header como um contêiner flexível */
+  justify-content: space-between; /* Distribui os itens ao longo do eixo principal, deixando um espaço entre eles */
+  align-items: center; 
+  padding: 0px 8px; /* Define um espaçamento interno nas laterais do header */
+  background-color: #ffffff; 
+  border-bottom: 1px solid #e0e0e0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  height: 88px; /* altura fixa do header */
+  position: absolute; /* header posicionado no topo, mas ele não acompanha o scroll */
+  top: 0; /* header no topo da página */
+  left: 0; 
+  z-index: 1000; /* Garante que o header fique acima de outros elementos na página */
+  width: 100%; /* define q o header ocupe toda a largura da tela */
+}
+
+/* logo portaria remota ao lado esquerdo da pag */
+.logo {
+  display: flex; 
+  align-items: center; /* Centraliza a logo verticalmente */
+  margin-left: 182px; /* Adiciona uma margem à esquerda para posicionar a logo */
+}
+
+.logo-image {
+  height: 35px; /* a altura fixa da imagem da logo */
+  width: auto; /* Mantém a proporção original da imagem */
+}
+
+.right-content {
+  display: flex; 
+  align-items: center;
+  gap: 35px; 
+  margin-right: auto; /* Move os elementos mais para a esquerda */
+  margin-left: 520px; /* Ajuste fino para puxar os elementos para a posição correta */
+}
+
+
+/* itens de login ao lado direito */
+.user-info {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; /* Define um espaçamento entre o nome e a foto de login*/
+}
+
+.fotologin {
+  width: 30px; /* Define a largura fixa da foto do usuário */
+  height: 30px; /* Define a altura fixa da foto do usuário */
+  border-radius: 50%; /* foto circular */
+  object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+}
+
+.user-name {
+  font-size: 16px; 
+  color: #6B7280; 
+  font-weight: bold; /* Deixa o nome do usuário em negrito */
+ 
+}
+
+.logout-button {
+  padding: 9px 13px; /* Define o espaçamento interno do botão */
+  background-color: #ffffff; 
+  color: #1f2a37ce; 
+  border: 2px solid #E5E7EB; /* Adiciona uma borda cinza ao botão */
+  border-radius: 8px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Transforma o cursor em uma mão ao passar sobre o botão */
+  transition: background-color 0.3s, transform 0.2s; /* Adiciona transições suaves ao hover e clique */
+  font-size: 14px; 
+  font-weight: 500; /* Define um peso médio para a fonte */
+  outline: none; /* Adicionado */
+}
+
+.logout-button:hover {
+  background-color: #1A56DB; /* Altera a cor de fundo ao passar o mouse */
+  color: #ffffff; 
+  transform: scale(1.05); 
+  outline: none; /* Adicionado */
+  border-color: #E5E7EB; /* Garante consistência */
+}
+
+.logout-button:focus {
+  outline: none; /* Remove contorno no foco */
+  box-shadow: none; /* Remove sombra se houver */
+} 
+
+.logout-button:active {
+  transform: scale(0.95); 
+}
