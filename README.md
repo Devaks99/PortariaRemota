@@ -1,6 +1,6 @@
 # 🔑📲 Portaria Remota
 
-Uma interface intuitiva para gerenciar visitas com uma tabela moderna e funcional , status visualmente ricos em design minimalista e moderno. Ideal para sistemas de controle de acesso ou agendas.
+Uma interface intuitiva para gerenciar visitas com uma tabela moderna e funcional , status visualmente ricos em design minimalista e moderno. Ideal para sistemas de controle de acesso ou agendas. Este projeto faz parte da Summer Academy , uma atividade promovida pela Accenture em parceria com a UNINASSAU Boa Viagem . 
 
 ![Preview da Interface](./src/preview/tela-1-portaria.png)
 
